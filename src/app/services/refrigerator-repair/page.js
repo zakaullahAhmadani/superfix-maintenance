@@ -11,10 +11,14 @@ export default function RefrigeratorRepairPage() {
   const [openFaq, setOpenFaq] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
+  const [itemsPerView, setItemsPerView] = useState(3);
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      setItemsPerView(mobile ? 1 : 3);
     };
     checkMobile();
     window.addEventListener('resize', checkMobile);
@@ -28,27 +32,30 @@ export default function RefrigeratorRepairPage() {
   // SEO Rich Content with English & Arabic
   const content = {
     en: {
-      heroTitle: 'Refrigerator & Fridge Repair Services',
-      heroDesc: 'Expert refrigerator repair services for all makes and models. From ice makers to cooling issues, we\'ve got you covered. 24/7 professional service.',
+      heroTitle: 'Refrigerator & Fridge Repair Services in Jeddah',
+      heroDesc: 'Expert refrigerator repair services for all makes and models in Jeddah. From ice makers to cooling issues, we\'ve got you covered. 24/7 professional service.',
       
-      aboutTitle: 'About Our Refrigerator Services',
-      aboutDesc1: 'With over 10 years of experience, we provide top-quality refrigerator repair, maintenance, and servicing. Our team of certified technicians ensures your fridge runs efficiently and keeps your food fresh.',
+      aboutTitle: 'About Our Refrigerator Services in Jeddah',
+      aboutDesc1: 'With over 10 years of experience in Jeddah, we provide top-quality refrigerator repair, maintenance, and servicing. Our team of certified technicians ensures your fridge runs efficiently and keeps your food fresh.',
       aboutDesc2: 'We specialize in all types of refrigerators including Single Door, Double Door, Side-by-Side, French Door, and Commercial refrigerators. Customer satisfaction is our top priority with 100% guaranteed service.',
       
       servicesTitle: 'Our Refrigerator Services',
       servicesSubtitle: 'Comprehensive fridge repair solutions tailored to your needs',
       
+      brandsTitle: 'Brands We Service in Jeddah',
+      brandsSubtitle: 'We repair all major refrigerator brands with genuine parts across Jeddah',
+      
       processTitle: 'How It Works',
-      processSubtitle: 'Simple 4-step process to get your refrigerator repaired',
+      processSubtitle: 'Simple 4-step process to get your refrigerator repaired in Jeddah',
       
-      testimonialsTitle: 'What Our Customers Say',
-      testimonialsSubtitle: 'Real stories from satisfied customers',
+      testimonialsTitle: 'What Our Jeddah Customers Say',
+      testimonialsSubtitle: 'Real stories from satisfied customers in Jeddah',
       
-      whyChooseTitle: 'Why Choose Us',
-      whyChooseSubtitle: 'What makes us the best choice for your refrigerator needs',
+      whyChooseTitle: 'Why Choose Us in Jeddah',
+      whyChooseSubtitle: 'What makes us the best choice for your refrigerator needs in Jeddah',
       
       faqTitle: 'Frequently Asked Questions',
-      faqSubtitle: 'Find answers to common questions about our refrigerator repair services',
+      faqSubtitle: 'Find answers to common questions about our refrigerator repair services in Jeddah',
       
       callNow: 'Call Now',
       getQuote: 'Get a Quote',
@@ -65,59 +72,71 @@ export default function RefrigeratorRepairPage() {
         { title: 'Cooling Issues', desc: 'Solve temperature problems, uneven cooling, and complete breakdown of cooling systems.', image: '/images/cooling-issue.webp' }
       ],
       
+      brands: [
+        { name: 'LG', description: 'Expert LG refrigerator repair service in Jeddah for all models including Linear Cooling and Smart Inverter compressors. Fast response across Jeddah districts.', logo: '/images/lg-logo.webp', bgColor: '#A50034' },
+        { name: 'Samsung', description: 'Professional Samsung refrigerator repair in Jeddah for French Door, Side-by-Side, and Twin Cooling Plus models. Same-day service available.', logo: '/images/samsung-logo.webp', bgColor: '#1428A0' },
+        { name: 'Whirlpool', description: 'Reliable Whirlpool fridge repair service in Jeddah for all models including French Door and Bottom Freezer. Certified technicians.', logo: '/images/whirlpool-logo.webp', bgColor: '#004B8D' },
+        { name: 'Haier', description: 'Affordable Haier refrigerator repair in Jeddah for all models including convertible and energy-efficient units. Quality guaranteed.', logo: '/images/haier-logo.webp', bgColor: '#E31837' },
+        { name: 'Bosch', description: 'Premium Bosch refrigerator repair service in Jeddah. Expert handling of German engineering with genuine parts warranty.', logo: '/images/bosch-logo.webp', bgColor: '#000000' },
+        { name: 'Panasonic', description: 'Professional Panasonic refrigerator repair in Jeddah for all models including inverter technology and smart cooling systems.', logo: '/images/panasonic-logo.webp', bgColor: '#1A2C3E' }
+      ],
+      
       process: [
-        { step: '01', title: 'Book Service', desc: 'Call us or book online for immediate service appointment', icon: '📞' },
-        { step: '02', title: 'Schedule Visit', desc: 'Our technician visits at your preferred time', icon: '📅' },
-        { step: '03', title: 'Diagnose & Fix', desc: 'Expert diagnosis and quick repair service', icon: '🔧' },
-        { step: '04', title: 'Quality Check', desc: 'Thorough testing and quality assurance', icon: '✅' }
+        { step: '01', title: 'Book Service', desc: 'Call us or book online for immediate service appointment in Jeddah', icon: '📞' },
+        { step: '02', title: 'Schedule Visit', desc: 'Our technician visits your location in Jeddah at your preferred time', icon: '📅' },
+        { step: '03', title: 'Diagnose & Fix', desc: 'Expert diagnosis and quick repair service at your doorstep', icon: '🔧' },
+        { step: '04', title: 'Quality Check', desc: 'Thorough testing and quality assurance before completion', icon: '✅' }
       ],
       
       testimonials: [
-        { name: 'Omar Abdullah', location: 'Riyadh', rating: 5, text: 'Excellent refrigerator repair service! Fixed my cooling issue in just 2 hours. Very professional team.', image: '/images/avatar1.webp' },
-        { name: 'Nora Hassan', location: 'Jeddah', rating: 5, text: 'Best fridge repair service in town. Reasonable prices and quick response. Highly recommended!', image: '/images/avatar2.webp' },
-        { name: 'Khalid Mohammed', location: 'Dammam', rating: 5, text: 'Great service! They replaced my compressor quickly and gave 1-year warranty. Very satisfied.', image: '/images/avatar3.webp' }
+        { name: 'Omar Abdullah', location: 'Al Salamah, Jeddah', rating: 5, text: 'Excellent refrigerator repair service in Jeddah! Fixed my cooling issue in just 2 hours. Very professional team. Highly recommended!', image: '/images/avatar1.webp' },
+        { name: 'Nora Hassan', location: 'Al Rawdah, Jeddah', rating: 5, text: 'Best fridge repair service in Jeddah. Reasonable prices and quick response. They came within an hour. Very satisfied!', image: '/images/avatar2.webp' },
+        { name: 'Khalid Mohammed', location: 'Al Nahdah, Jeddah', rating: 5, text: 'Great service in Jeddah! They replaced my compressor quickly and gave 1-year warranty. Professional team. Very happy with their work.', image: '/images/avatar3.webp' }
       ],
       
       whyChoose: [
-        { title: 'Expert Technicians', desc: 'Certified and experienced professionals with years of refrigerator repair expertise' },
-        { title: '24/7 Emergency', desc: 'Round-the-clock service availability for urgent fridge repairs' },
-        { title: 'Best Pricing', desc: 'Affordable rates with premium quality service' },
+        { title: 'Expert Technicians', desc: 'Certified and experienced professionals with years of refrigerator repair expertise in Jeddah' },
+        { title: '24/7 Emergency', desc: 'Round-the-clock service availability for urgent fridge repairs across Jeddah' },
+        { title: 'Best Pricing', desc: 'Affordable rates with premium quality service in Jeddah' },
         { title: 'Warranty', desc: '90-day service warranty on all repairs and 1-year on parts' },
-        { title: 'Fast Response', desc: 'Same-day service available within 2-3 hours' },
+        { title: 'Fast Response', desc: 'Same-day service available within 2-3 hours anywhere in Jeddah' },
         { title: 'Genuine Parts', desc: 'Original spare parts with manufacturer warranty' }
       ],
       
       faqs: [
-        { q: 'How long does refrigerator repair take?', a: 'Most refrigerator repairs are completed within 2-3 hours. Compressor replacement may take 4-5 hours. We\'ll keep you updated throughout the process.' },
-        { q: 'Do you provide emergency fridge repair?', a: 'Yes! We offer 24/7 emergency refrigerator repair services across the city. Call our hotline for immediate assistance to save your food.' },
-        { q: 'What brands do you service?', a: 'We service all major brands including LG, Samsung, Whirlpool, GE, Kenmore, Frigidaire, Bosch, Panasonic, Haier, and more.' },
+        { q: 'How long does refrigerator repair take in Jeddah?', a: 'Most refrigerator repairs in Jeddah are completed within 2-3 hours. Compressor replacement may take 4-5 hours. We\'ll keep you updated throughout the process.' },
+        { q: 'Do you provide emergency fridge repair in Jeddah?', a: 'Yes! We offer 24/7 emergency refrigerator repair services across all districts of Jeddah. Call our hotline for immediate assistance to save your food.' },
+        { q: 'What areas of Jeddah do you serve?', a: 'We serve all areas of Jeddah including Al Salamah, Al Rawdah, Al Nahdah, Al Andalus, Al Zahra, Al Faisaliyah, and all other neighborhoods.' },
         { q: 'Is there a warranty on repairs?', a: 'Yes, we provide a 90-day warranty on all repairs and a 1-year warranty on compressor and parts replacement.' },
         { q: 'How often should refrigerator be serviced?', a: 'We recommend servicing your refrigerator every 6-12 months for optimal performance, energy efficiency, and longer lifespan.' },
-        { q: 'Do you offer maintenance contracts?', a: 'Yes, we offer flexible annual maintenance contracts with priority service, discounted rates, and regular checkups.' }
+        { q: 'Do you offer maintenance contracts in Jeddah?', a: 'Yes, we offer flexible annual maintenance contracts with priority service, discounted rates, and regular checkups across Jeddah.' }
       ]
     },
     ar: {
-      heroTitle: 'خدمات إصلاح الثلاجات والبرادات',
-      heroDesc: 'خدمات إصلاح ثلاجات احترافية لجميع الماركات والموديلات. من مشاكل صناعة الثلج إلى مشاكل التبريد، نحن هنا لمساعدتك. خدمة احترافية على مدار الساعة.',
+      heroTitle: 'خدمات إصلاح الثلاجات والبرادات في جدة',
+      heroDesc: 'خدمات إصلاح ثلاجات احترافية لجميع الماركات والموديلات في جدة. من مشاكل صناعة الثلج إلى مشاكل التبريد، نحن هنا لمساعدتك. خدمة احترافية على مدار الساعة.',
       
-      aboutTitle: 'عن خدمات الثلاجات لدينا',
-      aboutDesc1: 'نحن نتمتع بخبرة تزيد عن 10 سنوات في تقديم خدمات إصلاح وصيانة الثلاجات عالية الجودة. فريقنا من الفنيين المعتمدين يضمن تشغيل ثلاجتك بكفاءة والحفاظ على طعامك طازجاً.',
+      aboutTitle: 'عن خدمات الثلاجات لدينا في جدة',
+      aboutDesc1: 'نحن نتمتع بخبرة تزيد عن 10 سنوات في جدة في تقديم خدمات إصلاح وصيانة الثلاجات عالية الجودة. فريقنا من الفنيين المعتمدين يضمن تشغيل ثلاجتك بكفاءة والحفاظ على طعامك طازجاً.',
       aboutDesc2: 'نحن متخصصون في جميع أنواع الثلاجات بما في ذلك الباب الواحد والبابين والجانبية والثلاجات الفرنسية والتجارية. رضا العملاء هو أولويتنا القصوى مع خدمة مضمونة 100%.',
       
       servicesTitle: 'خدمات الثلاجات لدينا',
       servicesSubtitle: 'حلول شاملة لإصلاح الثلاجات مصممة خصيصاً لاحتياجاتك',
       
+      brandsTitle: 'الماركات التي نخدمها في جدة',
+      brandsSubtitle: 'نقوم بإصلاح جميع ماركات الثلاجات الرئيسية بقطع غيار أصلية في جميع أنحاء جدة',
+      
       processTitle: 'كيف يعمل',
-      processSubtitle: 'عملية بسيطة من 4 خطوات لإصلاح ثلاجتك',
+      processSubtitle: 'عملية بسيطة من 4 خطوات لإصلاح ثلاجتك في جدة',
       
-      testimonialsTitle: 'ماذا يقول عملاؤنا',
-      testimonialsSubtitle: 'قصص حقيقية من عملاء راضين',
+      testimonialsTitle: 'ماذا يقول عملاؤنا في جدة',
+      testimonialsSubtitle: 'قصص حقيقية من عملاء راضين في جدة',
       
-      whyChooseTitle: 'لماذا تختارنا',
-      whyChooseSubtitle: 'ما يجعلنا الخيار الأفضل لاحتياجات الثلاجة الخاصة بك',
+      whyChooseTitle: 'لماذا تختارنا في جدة',
+      whyChooseSubtitle: 'ما يجعلنا الخيار الأفضل لاحتياجات الثلاجة الخاصة بك في جدة',
       
       faqTitle: 'الأسئلة الشائعة',
-      faqSubtitle: 'اعثر على إجابات للأسئلة الشائعة حول خدمات إصلاح الثلاجات لدينا',
+      faqSubtitle: 'اعثر على إجابات للأسئلة الشائعة حول خدمات إصلاح الثلاجات لدينا في جدة',
       
       callNow: 'اتصل الآن',
       getQuote: 'احصل على عرض سعر',
@@ -134,35 +153,44 @@ export default function RefrigeratorRepairPage() {
         { title: 'مشاكل التبريد', desc: 'حل مشاكل درجة الحرارة والتبريد غير المتساوي وتعطل أنظمة التبريد.', image: '/images/cooling-issue.webp' }
       ],
       
+      brands: [
+        { name: 'LG', description: 'خدمة إصلاح ثلاجات LG احترافية في جدة لجميع الموديلات بما في ذلك Linear Cooling و Smart Inverter. استجابة سريعة في جميع أحياء جدة.', logo: '/images/lg-logo.webp', bgColor: '#A50034' },
+        { name: 'سامسونج', description: 'إصلاح ثلاجات سامسونج احترافي في جدة للأبواب الفرنسية والجانبية ونظام Twin Cooling Plus. خدمة نفس اليوم متاحة.', logo: '/images/samsung-logo.webp', bgColor: '#1428A0' },
+        { name: 'ويرلبول', description: 'خدمة إصلاح ثلاجات ويرلبول موثوقة في جدة لجميع الموديلات. فنيون معتمدون.', logo: '/images/whirlpool-logo.webp', bgColor: '#004B8D' },
+        { name: 'هاير', description: 'إصلاح ثلاجات هاير بأسعار معقولة في جدة لجميع الموديلات. جودة مضمونة.', logo: '/images/haier-logo.webp', bgColor: '#E31837' },
+        { name: 'بوش', description: 'خدمة إصلاح ثلاجات بوش الفاخرة في جدة. خبراء في التعامل مع الهندسة الألمانية مع ضمان قطع الغيار الأصلية.', logo: '/images/bosch-logo.webp', bgColor: '#000000' },
+        { name: 'باناسونيك', description: 'إصلاح ثلاجات باناسونيك احترافي في جدة لجميع الموديلات بما في ذلك تكنولوجيا الإنفرتر وأنظمة التبريد الذكية.', logo: '/images/panasonic-logo.webp', bgColor: '#1A2C3E' }
+      ],
+      
       process: [
-        { step: '٠١', title: 'احجز الخدمة', desc: 'اتصل بنا أو احجز عبر الإنترنت لتحديد موعد الخدمة الفوري', icon: '📞' },
-        { step: '٠٢', title: 'جدولة الزيارة', desc: 'فنيانا يزورك في الوقت الذي تفضله', icon: '📅' },
-        { step: '٠٣', title: 'التشخيص والإصلاح', desc: 'تشخيص خبير وإصلاح سريع', icon: '🔧' },
-        { step: '٠٤', title: 'فحص الجودة', desc: 'اختبار شامل وضمان الجودة', icon: '✅' }
+        { step: '٠١', title: 'احجز الخدمة', desc: 'اتصل بنا أو احجز عبر الإنترنت لتحديد موعد الخدمة الفوري في جدة', icon: '📞' },
+        { step: '٠٢', title: 'جدولة الزيارة', desc: 'فنيانا يزورك في موقعك في جدة في الوقت الذي تفضله', icon: '📅' },
+        { step: '٠٣', title: 'التشخيص والإصلاح', desc: 'تشخيص خبير وإصلاح سريع على عتبة داركم', icon: '🔧' },
+        { step: '٠٤', title: 'فحص الجودة', desc: 'اختبار شامل وضمان الجودة قبل الانتهاء', icon: '✅' }
       ],
       
       testimonials: [
-        { name: 'عمر عبدالله', location: 'الرياض', rating: 5, text: 'خدمة إصلاح ثلاجات ممتازة! تم إصلاح مشكلة التبريد في غضون ساعتين. فريق محترف جداً.', image: '/images/avatar1.webp' },
-        { name: 'نورة حسن', location: 'جدة', rating: 5, text: 'أفضل خدمة إصلاح ثلاجات في المدينة. أسعار معقولة واستجابة سريعة. موصى به بشدة!', image: '/images/avatar2.webp' },
-        { name: 'خالد محمد', location: 'الدمام', rating: 5, text: 'خدمة رائعة! قاموا باستبدال الضاغط بسرعة وأعطوني ضمان لمدة عام. راضٍ جداً.', image: '/images/avatar3.webp' }
+        { name: 'عمر عبدالله', location: 'السلامة، جدة', rating: 5, text: 'خدمة إصلاح ثلاجات ممتازة في جدة! تم إصلاح مشكلة التبريد في غضون ساعتين. فريق محترف جداً. موصى به بشدة!', image: '/images/avatar1.webp' },
+        { name: 'نورة حسن', location: 'الروضة، جدة', rating: 5, text: 'أفضل خدمة إصلاح ثلاجات في جدة. أسعار معقولة واستجابة سريعة. جاءوا في غضون ساعة. راضية جداً!', image: '/images/avatar2.webp' },
+        { name: 'خالد محمد', location: 'النزهة، جدة', rating: 5, text: 'خدمة رائعة في جدة! قاموا باستبدال الضاغط بسرعة وأعطوني ضمان لمدة عام. فريق محترف. سعيد جداً بعملهم.', image: '/images/avatar3.webp' }
       ],
       
       whyChoose: [
-        { title: 'فنيون خبراء', desc: 'فنيون معتمدون وذوو خبرة مع سنوات من الخبرة في إصلاح الثلاجات' },
-        { title: 'طوارئ 24/7', desc: 'خدمة على مدار الساعة للإصلاحات العاجلة للثلاجات' },
-        { title: 'أفضل الأسعار', desc: 'أسعار معقولة مع خدمة عالية الجودة' },
+        { title: 'فنيون خبراء', desc: 'فنيون معتمدون وذوو خبرة مع سنوات من الخبرة في إصلاح الثلاجات في جدة' },
+        { title: 'طوارئ 24/7', desc: 'خدمة على مدار الساعة للإصلاحات العاجلة للثلاجات في جميع أنحاء جدة' },
+        { title: 'أفضل الأسعار', desc: 'أسعار معقولة مع خدمة عالية الجودة في جدة' },
         { title: 'ضمان', desc: 'ضمان خدمة لمدة 90 يوماً على جميع الإصلاحات وضمان عام على الأجزاء' },
-        { title: 'استجابة سريعة', desc: 'خدمة نفس اليوم متاحة خلال 2-3 ساعات' },
+        { title: 'استجابة سريعة', desc: 'خدمة نفس اليوم متاحة خلال 2-3 ساعة في أي مكان في جدة' },
         { title: 'قطع غيار أصلية', desc: 'قطع غيار أصلية مع ضمان المصنع' }
       ],
       
       faqs: [
-        { q: 'كم من الوقت يستغرق إصلاح الثلاجة؟', a: 'يتم إكمال معظم إصلاحات الثلاجات خلال 2-3 ساعات. قد يستغرق استبدال الضاغط 4-5 ساعات. وسنبقيك على اطلاع طوال العملية.' },
-        { q: 'هل تقدمون خدمة إصلاح طارئة للثلاجات؟', a: 'نعم! نقدم خدمات إصلاح طارئة للثلاجات على مدار الساعة في جميع أنحاء المدينة. اتصل بخط المساعدة لدينا للحصول على مساعدة فورية للحفاظ على طعامك.' },
-        { q: 'ما هي الماركات التي تخدمونها؟', a: 'نخدم جميع الماركات الرئيسية بما في ذلك LG وسامسونج ووールプール وجي إي وكينمور وفريجيدير وبوش وباناسونيك وهاير والمزيد.' },
+        { q: 'كم من الوقت يستغرق إصلاح الثلاجة في جدة؟', a: 'يتم إكمال معظم إصلاحات الثلاجات في جدة خلال 2-3 ساعات. قد يستغرق استبدال الضاغط 4-5 ساعات. وسنبقيك على اطلاع طوال العملية.' },
+        { q: 'هل تقدمون خدمة إصلاح طارئة للثلاجات في جدة؟', a: 'نعم! نقدم خدمات إصلاح طارئة للثلاجات على مدار الساعة في جميع أحياء جدة. اتصل بخط المساعدة لدينا للحصول على مساعدة فورية للحفاظ على طعامك.' },
+        { q: 'ما هي مناطق جدة التي تخدمونها؟', a: 'نخدم جميع مناطق جدة بما في ذلك السلامة والروضة والنزهة والأندلس والزهراء والفيصلية وجميع الأحياء الأخرى.' },
         { q: 'هل هناك ضمان على الإصلاحات؟', a: 'نعم، نقدم ضماناً لمدة 90 يوماً على جميع الإصلاحات وضماناً لمدة عام على استبدال الضاغط والأجزاء.' },
         { q: 'كم مرة يجب صيانة الثلاجة؟', a: 'نوصي بصيانة الثلاجة كل 6-12 شهراً للحصول على الأداء الأمثل وكفاءة الطاقة وعمر أطول.' },
-        { q: 'هل تقدمون عقود صيانة؟', a: 'نعم، نقدم عقود صيانة سنوية مرنة مع خدمة ذات أولوية وأسعار مخفضة وفحوصات دورية.' }
+        { q: 'هل تقدمون عقود صيانة في جدة؟', a: 'نعم، نقدم عقود صيانة سنوية مرنة مع خدمة ذات أولوية وأسعار مخفضة وفحوصات دورية في جميع أنحاء جدة.' }
       ]
     }
   };
@@ -182,6 +210,20 @@ export default function RefrigeratorRepairPage() {
     setActiveTestimonial((prev) => (prev - 1 + currentContent.testimonials.length) % currentContent.testimonials.length);
   };
 
+  // Brand slider navigation
+  const totalBrands = currentContent.brands.length;
+  const maxIndex = totalBrands - itemsPerView;
+
+  const nextBrands = () => {
+    setCurrentBrandIndex((prev) => Math.min(prev + 1, maxIndex));
+  };
+
+  const prevBrands = () => {
+    setCurrentBrandIndex((prev) => Math.max(prev - 1, 0));
+  };
+
+  const visibleBrands = currentContent.brands.slice(currentBrandIndex, currentBrandIndex + itemsPerView);
+
   return (
     <main style={{ paddingTop: '20px', minHeight: '100vh' }} dir={isRTL ? 'rtl' : 'ltr'}>
       {/* Schema Markup for SEO */}
@@ -191,13 +233,15 @@ export default function RefrigeratorRepairPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Super Fix Maintenance - Refrigerator & Fridge Repair Services",
+            "name": "Super Fix Maintenance - Refrigerator & Fridge Repair Services in Jeddah",
             "image": "https://superfix.com/logo.png",
             "telephone": phoneNumber,
             "address": {
               "@type": "PostalAddress",
+              "addressLocality": "Jeddah",
               "addressCountry": "SA"
             },
+            "areaServed": "Jeddah",
             "openingHours": "Mo-Su 00:00-23:59",
             "priceRange": "$$",
             "serviceType": "Refrigerator Repair"
@@ -339,7 +383,7 @@ export default function RefrigeratorRepairPage() {
           }}>
             <Image
               src="/images/refrigerator.webp"
-              alt={isRTL ? "خدمة إصلاح الثلاجات" : "Refrigerator Repair Service"}
+              alt={isRTL ? "خدمة إصلاح الثلاجات في جدة" : "Refrigerator Repair Service in Jeddah"}
               fill
               style={{ 
                 objectFit: 'cover',
@@ -437,8 +481,177 @@ export default function RefrigeratorRepairPage() {
         </div>
       </section>
 
-      {/* Process Section - How It Works (NEW) */}
+      {/* Brands Carousel Section - 6 Brands */}
       <section style={{ padding: isMobile ? '60px 20px' : '80px 20px', backgroundColor: '#f9fafb' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <h2 style={{ 
+            fontSize: isMobile ? '1.8rem' : '2.5rem', 
+            textAlign: 'center', 
+            color: '#00939A', 
+            marginBottom: '15px' 
+          }}>
+            {currentContent.brandsTitle}
+          </h2>
+          <p style={{ 
+            textAlign: 'center', 
+            color: '#666', 
+            marginBottom: '40px', 
+            fontSize: isMobile ? '1rem' : '1.1rem' 
+          }}>
+            {currentContent.brandsSubtitle}
+          </p>
+          
+          <div style={{ 
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '15px'
+          }}>
+            {/* Previous Button */}
+            <button
+              onClick={prevBrands}
+              disabled={currentBrandIndex === 0}
+              style={{
+                background: currentBrandIndex === 0 ? '#ccc' : '#00939A',
+                color: 'white',
+                border: 'none',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                cursor: currentBrandIndex === 0 ? 'not-allowed' : 'pointer',
+                fontSize: '1.2rem',
+                transition: 'all 0.3s',
+                flexShrink: 0
+              }}
+            >
+              {isRTL ? '→' : '←'}
+            </button>
+            
+            {/* Brands Container */}
+            <div style={{
+              flex: 1,
+              overflow: 'hidden'
+            }}>
+              <div style={{
+                display: 'flex',
+                gap: '25px',
+                transition: 'transform 0.5s ease-in-out',
+                transform: `translateX(${isRTL ? currentBrandIndex * 100 : -currentBrandIndex * 100}%)`
+              }}>
+                {currentContent.brands.map((brand, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      minWidth: isMobile ? '100%' : `calc(33.333% - 17px)`,
+                      background: 'white',
+                      borderRadius: '12px',
+                      overflow: 'hidden',
+                      boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+                      transition: 'transform 0.3s, box-shadow 0.3s',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <div style={{
+                      background: brand.bgColor,
+                      height: '150px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      padding: '20px'
+                    }}>
+                      <div style={{
+                        background: 'white',
+                        borderRadius: '12px',
+                        padding: '15px 25px',
+                        display: 'inline-block'
+                      }}>
+                        <h3 style={{
+                          fontSize: '1.5rem',
+                          fontWeight: 'bold',
+                          color: brand.bgColor,
+                          margin: 0
+                        }}>
+                          {brand.name}
+                        </h3>
+                      </div>
+                    </div>
+                    <div style={{ padding: '20px', textAlign: isRTL ? 'right' : 'left' }}>
+                      <p style={{ color: '#666', lineHeight: '1.6', marginBottom: '15px', fontSize: '0.9rem' }}>
+                        {brand.description}
+                      </p>
+                      <a
+                        href={whatsappLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          display: 'inline-block',
+                          background: '#F0422C',
+                          color: '#FEFDFD',
+                          padding: '8px 16px',
+                          textDecoration: 'none',
+                          borderRadius: '6px',
+                          fontSize: '0.85rem',
+                          fontWeight: 'bold',
+                          transition: 'all 0.3s'
+                        }}
+                      >
+                        {currentContent.bookWhatsapp}
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Next Button */}
+            <button
+              onClick={nextBrands}
+              disabled={currentBrandIndex >= maxIndex}
+              style={{
+                background: currentBrandIndex >= maxIndex ? '#ccc' : '#00939A',
+                color: 'white',
+                border: 'none',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                cursor: currentBrandIndex >= maxIndex ? 'not-allowed' : 'pointer',
+                fontSize: '1.2rem',
+                transition: 'all 0.3s',
+                flexShrink: 0
+              }}
+            >
+              {isRTL ? '←' : '→'}
+            </button>
+          </div>
+          
+          {/* Dots Indicator */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '10px',
+            marginTop: '30px'
+          }}>
+            {Array.from({ length: totalBrands - itemsPerView + 1 }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentBrandIndex(idx)}
+                style={{
+                  width: '10px',
+                  height: '10px',
+                  borderRadius: '50%',
+                  background: currentBrandIndex === idx ? '#00939A' : '#ccc',
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s'
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section - How It Works */}
+      <section style={{ padding: isMobile ? '60px 20px' : '80px 20px', backgroundColor: 'white' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{ 
             fontSize: isMobile ? '1.8rem' : '2.5rem', 
@@ -464,7 +677,7 @@ export default function RefrigeratorRepairPage() {
           }}>
             {currentContent.process.map((step, index) => (
               <div key={index} style={{
-                background: 'white',
+                background: '#f9fafb',
                 borderRadius: '12px',
                 padding: '30px 20px',
                 textAlign: 'center',
@@ -499,7 +712,7 @@ export default function RefrigeratorRepairPage() {
         </div>
       </section>
 
-      {/* Testimonials Section - Customer Reviews (NEW) */}
+      {/* Testimonials Section - Customer Reviews */}
       <section style={{ padding: isMobile ? '60px 20px' : '80px 20px', backgroundColor: '#00939A' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ 
