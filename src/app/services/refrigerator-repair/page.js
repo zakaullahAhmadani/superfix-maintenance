@@ -29,7 +29,7 @@ export default function RefrigeratorRepairPage() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  // SEO Rich Content with English & Arabic
+  // SEO Rich Content with English & Arabic - 10 Brands
   const content = {
     en: {
       heroTitle: 'Refrigerator & Fridge Repair Services in Jeddah',
@@ -73,12 +73,16 @@ export default function RefrigeratorRepairPage() {
       ],
       
       brands: [
-        { name: 'LG', description: 'Expert LG refrigerator repair service in Jeddah for all models including Linear Cooling and Smart Inverter compressors. Fast response across Jeddah districts.', logo: '/images/lg-logo.webp', bgColor: '#A50034' },
-        { name: 'Samsung', description: 'Professional Samsung refrigerator repair in Jeddah for French Door, Side-by-Side, and Twin Cooling Plus models. Same-day service available.', logo: '/images/samsung-logo.webp', bgColor: '#1428A0' },
-        { name: 'Whirlpool', description: 'Reliable Whirlpool fridge repair service in Jeddah for all models including French Door and Bottom Freezer. Certified technicians.', logo: '/images/whirlpool-logo.webp', bgColor: '#004B8D' },
-        { name: 'Haier', description: 'Affordable Haier refrigerator repair in Jeddah for all models including convertible and energy-efficient units. Quality guaranteed.', logo: '/images/haier-logo.webp', bgColor: '#E31837' },
-        { name: 'Bosch', description: 'Premium Bosch refrigerator repair service in Jeddah. Expert handling of German engineering with genuine parts warranty.', logo: '/images/bosch-logo.webp', bgColor: '#000000' },
-        { name: 'Panasonic', description: 'Professional Panasonic refrigerator repair in Jeddah for all models including inverter technology and smart cooling systems.', logo: '/images/panasonic-logo.webp', bgColor: '#1A2C3E' }
+        { name: 'LG', description: 'LG refrigerator repair in Jeddah. Linear Cooling & Smart Inverter.', bgColor: '#A50034' },
+        { name: 'Samsung', description: 'Samsung fridge repair in Jeddah. French Door & Side-by-Side.', bgColor: '#1428A0' },
+        { name: 'Whirlpool', description: 'Whirlpool refrigerator repair in Jeddah. All models.', bgColor: '#004B8D' },
+        { name: 'Haier', description: 'Haier fridge repair in Jeddah. Convertible & energy-efficient.', bgColor: '#E31837' },
+        { name: 'Bosch', description: 'Bosch refrigerator repair in Jeddah. German engineering.', bgColor: '#000000' },
+        { name: 'Panasonic', description: 'Panasonic fridge repair in Jeddah. Inverter technology.', bgColor: '#1A2C3E' },
+        { name: 'Toshiba', description: 'Toshiba refrigerator repair in Jeddah. All models.', bgColor: '#000000' },
+        { name: 'Sharp', description: 'Sharp fridge repair in Jeddah. Plasma cluster technology.', bgColor: '#0066B4' },
+        { name: 'Gree', description: 'Gree refrigerator repair in Jeddah. Energy efficient.', bgColor: '#1A2C3E' },
+        { name: 'Mitsubishi', description: 'Mitsubishi fridge repair in Jeddah. Premium quality.', bgColor: '#E60012' }
       ],
       
       process: [
@@ -154,12 +158,16 @@ export default function RefrigeratorRepairPage() {
       ],
       
       brands: [
-        { name: 'LG', description: 'خدمة إصلاح ثلاجات LG احترافية في جدة لجميع الموديلات بما في ذلك Linear Cooling و Smart Inverter. استجابة سريعة في جميع أحياء جدة.', logo: '/images/lg-logo.webp', bgColor: '#A50034' },
-        { name: 'سامسونج', description: 'إصلاح ثلاجات سامسونج احترافي في جدة للأبواب الفرنسية والجانبية ونظام Twin Cooling Plus. خدمة نفس اليوم متاحة.', logo: '/images/samsung-logo.webp', bgColor: '#1428A0' },
-        { name: 'ويرلبول', description: 'خدمة إصلاح ثلاجات ويرلبول موثوقة في جدة لجميع الموديلات. فنيون معتمدون.', logo: '/images/whirlpool-logo.webp', bgColor: '#004B8D' },
-        { name: 'هاير', description: 'إصلاح ثلاجات هاير بأسعار معقولة في جدة لجميع الموديلات. جودة مضمونة.', logo: '/images/haier-logo.webp', bgColor: '#E31837' },
-        { name: 'بوش', description: 'خدمة إصلاح ثلاجات بوش الفاخرة في جدة. خبراء في التعامل مع الهندسة الألمانية مع ضمان قطع الغيار الأصلية.', logo: '/images/bosch-logo.webp', bgColor: '#000000' },
-        { name: 'باناسونيك', description: 'إصلاح ثلاجات باناسونيك احترافي في جدة لجميع الموديلات بما في ذلك تكنولوجيا الإنفرتر وأنظمة التبريد الذكية.', logo: '/images/panasonic-logo.webp', bgColor: '#1A2C3E' }
+        { name: 'LG', description: 'إصلاح ثلاجات LG في جدة. التبريد الخطي والإنفرتر.', bgColor: '#A50034' },
+        { name: 'سامسونج', description: 'إصلاح ثلاجات سامسونج في جدة. أبواب فرنسية وجانبية.', bgColor: '#1428A0' },
+        { name: 'ويرلبول', description: 'إصلاح ثلاجات ويرلبول في جدة. جميع الموديلات.', bgColor: '#004B8D' },
+        { name: 'هاير', description: 'إصلاح ثلاجات هاير في جدة. قابلة للتحويل وموفرة للطاقة.', bgColor: '#E31837' },
+        { name: 'بوش', description: 'إصلاح ثلاجات بوش في جدة. هندسة ألمانية.', bgColor: '#000000' },
+        { name: 'باناسونيك', description: 'إصلاح ثلاجات باناسونيك في جدة. تقنية الإنفرتر.', bgColor: '#1A2C3E' },
+        { name: 'توشيبا', description: 'إصلاح ثلاجات توشيبا في جدة. جميع الموديلات.', bgColor: '#000000' },
+        { name: 'شارب', description: 'إصلاح ثلاجات شارب في جدة. تقنية بلازما.', bgColor: '#0066B4' },
+        { name: 'جري', description: 'إصلاح ثلاجات جري في جدة. موفرة للطاقة.', bgColor: '#1A2C3E' },
+        { name: 'ميتسوبيشي', description: 'إصلاح ثلاجات ميتسوبيشي في جدة. جودة فاخرة.', bgColor: '#E60012' }
       ],
       
       process: [
@@ -221,8 +229,6 @@ export default function RefrigeratorRepairPage() {
   const prevBrands = () => {
     setCurrentBrandIndex((prev) => Math.max(prev - 1, 0));
   };
-
-  const visibleBrands = currentContent.brands.slice(currentBrandIndex, currentBrandIndex + itemsPerView);
 
   return (
     <main style={{ paddingTop: '20px', minHeight: '100vh' }} dir={isRTL ? 'rtl' : 'ltr'}>
@@ -481,7 +487,7 @@ export default function RefrigeratorRepairPage() {
         </div>
       </section>
 
-      {/* Brands Carousel Section - 6 Brands */}
+      {/* Brands Carousel Section - 10 Brands - Clean Mobile Display */}
       <section style={{ padding: isMobile ? '60px 20px' : '80px 20px', backgroundColor: '#f9fafb' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{ 
@@ -521,7 +527,10 @@ export default function RefrigeratorRepairPage() {
                 cursor: currentBrandIndex === 0 ? 'not-allowed' : 'pointer',
                 fontSize: '1.2rem',
                 transition: 'all 0.3s',
-                flexShrink: 0
+                flexShrink: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}
             >
               {isRTL ? '→' : '←'}
@@ -534,7 +543,7 @@ export default function RefrigeratorRepairPage() {
             }}>
               <div style={{
                 display: 'flex',
-                gap: '25px',
+                gap: '20px',
                 transition: 'transform 0.5s ease-in-out',
                 transform: `translateX(${isRTL ? currentBrandIndex * 100 : -currentBrandIndex * 100}%)`
               }}>
@@ -542,7 +551,7 @@ export default function RefrigeratorRepairPage() {
                   <div
                     key={index}
                     style={{
-                      minWidth: isMobile ? '100%' : `calc(33.333% - 17px)`,
+                      minWidth: isMobile ? '100%' : `calc(33.333% - 14px)`,
                       background: 'white',
                       borderRadius: '12px',
                       overflow: 'hidden',
@@ -553,20 +562,20 @@ export default function RefrigeratorRepairPage() {
                   >
                     <div style={{
                       background: brand.bgColor,
-                      height: '150px',
+                      height: isMobile ? '100px' : '130px',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      padding: '20px'
+                      padding: '15px'
                     }}>
                       <div style={{
                         background: 'white',
-                        borderRadius: '12px',
-                        padding: '15px 25px',
+                        borderRadius: '10px',
+                        padding: isMobile ? '8px 16px' : '12px 24px',
                         display: 'inline-block'
                       }}>
                         <h3 style={{
-                          fontSize: '1.5rem',
+                          fontSize: isMobile ? '1.2rem' : '1.4rem',
                           fontWeight: 'bold',
                           color: brand.bgColor,
                           margin: 0
@@ -575,8 +584,16 @@ export default function RefrigeratorRepairPage() {
                         </h3>
                       </div>
                     </div>
-                    <div style={{ padding: '20px', textAlign: isRTL ? 'right' : 'left' }}>
-                      <p style={{ color: '#666', lineHeight: '1.6', marginBottom: '15px', fontSize: '0.9rem' }}>
+                    <div style={{ 
+                      padding: isMobile ? '12px' : '15px', 
+                      textAlign: isRTL ? 'right' : 'left'
+                    }}>
+                      <p style={{ 
+                        color: '#555', 
+                        lineHeight: isMobile ? '1.4' : '1.5', 
+                        marginBottom: '12px', 
+                        fontSize: isMobile ? '0.75rem' : '0.8rem'
+                      }}>
                         {brand.description}
                       </p>
                       <a
@@ -587,12 +604,13 @@ export default function RefrigeratorRepairPage() {
                           display: 'inline-block',
                           background: '#F0422C',
                           color: '#FEFDFD',
-                          padding: '8px 16px',
+                          padding: isMobile ? '6px 12px' : '8px 16px',
                           textDecoration: 'none',
-                          borderRadius: '6px',
-                          fontSize: '0.85rem',
+                          borderRadius: '5px',
+                          fontSize: isMobile ? '0.7rem' : '0.8rem',
                           fontWeight: 'bold',
-                          transition: 'all 0.3s'
+                          transition: 'all 0.3s',
+                          textAlign: 'center'
                         }}
                       >
                         {currentContent.bookWhatsapp}
@@ -617,7 +635,10 @@ export default function RefrigeratorRepairPage() {
                 cursor: currentBrandIndex >= maxIndex ? 'not-allowed' : 'pointer',
                 fontSize: '1.2rem',
                 transition: 'all 0.3s',
-                flexShrink: 0
+                flexShrink: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}
             >
               {isRTL ? '←' : '→'}
@@ -629,7 +650,8 @@ export default function RefrigeratorRepairPage() {
             display: 'flex',
             justifyContent: 'center',
             gap: '10px',
-            marginTop: '30px'
+            marginTop: '25px',
+            flexWrap: 'wrap'
           }}>
             {Array.from({ length: totalBrands - itemsPerView + 1 }).map((_, idx) => (
               <button

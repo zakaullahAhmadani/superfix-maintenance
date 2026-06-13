@@ -29,7 +29,7 @@ export default function AirConditioningPage() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  // SEO Rich Content with English & Arabic
+  // SEO Rich Content with English & Arabic - 10 Brands
   const content = {
     en: {
       heroTitle: 'Air Conditioning Repair Services in Jeddah',
@@ -73,12 +73,16 @@ export default function AirConditioningPage() {
       ],
       
       brands: [
-        { name: 'LG', description: 'Expert LG AC repair service in Jeddah for all models including Dual Inverter and Art Cool series. Fast response across Jeddah districts.', logo: '/images/lg-logo.webp', bgColor: '#A50034' },
-        { name: 'Samsung', description: 'Professional Samsung AC repair in Jeddah for Wind-Free, Digital Inverter, and all other models. Same-day service available.', logo: '/images/samsung-logo.webp', bgColor: '#1428A0' },
-        { name: 'Daikin', description: 'Reliable Daikin AC repair service in Jeddah. Expert handling of Japanese engineering with genuine parts warranty.', logo: '/images/daikin-logo.webp', bgColor: '#004B8D' },
-        { name: 'Carrier', description: 'Premium Carrier AC repair service in Jeddah for all models including WeatherMaker and Infinity series.', logo: '/images/carrier-logo.webp', bgColor: '#E31837' },
-        { name: 'Gree', description: 'Affordable Gree AC repair in Jeddah for all models including inverter technology and smart cooling systems.', logo: '/images/gree-logo.webp', bgColor: '#1A2C3E' },
-        { name: 'Haier', description: 'Professional Haier AC repair service in Jeddah for all models including inverter and smart AC units.', logo: '/images/haier-logo.webp', bgColor: '#00A1B0' }
+        { name: 'LG', description: 'LG AC repair in Jeddah. Dual Inverter & Art Cool series.', bgColor: '#A50034' },
+        { name: 'Samsung', description: 'Samsung AC repair in Jeddah. Wind-Free & Digital Inverter.', bgColor: '#1428A0' },
+        { name: 'Daikin', description: 'Daikin AC repair in Jeddah. Japanese engineering quality.', bgColor: '#004B8D' },
+        { name: 'Carrier', description: 'Carrier AC repair in Jeddah. WeatherMaker & Infinity.', bgColor: '#E31837' },
+        { name: 'Gree', description: 'Gree AC repair in Jeddah. Inverter technology.', bgColor: '#1A2C3E' },
+        { name: 'Haier', description: 'Haier AC repair in Jeddah. Smart AC units.', bgColor: '#00A1B0' },
+        { name: 'Toshiba', description: 'Toshiba AC repair in Jeddah. All models.', bgColor: '#000000' },
+        { name: 'Mitsubishi', description: 'Mitsubishi AC repair in Jeddah. Premium quality.', bgColor: '#E60012' },
+        { name: 'Panasonic', description: 'Panasonic AC repair in Jeddah. Inverter technology.', bgColor: '#1A2C3E' },
+        { name: 'Sharp', description: 'Sharp AC repair in Jeddah. Plasma cluster technology.', bgColor: '#0066B4' }
       ],
       
       process: [
@@ -154,12 +158,16 @@ export default function AirConditioningPage() {
       ],
       
       brands: [
-        { name: 'LG', description: 'خدمة إصلاح مكيفات LG احترافية في جدة لجميع الموديلات بما في ذلك Dual Inverter و Art Cool. استجابة سريعة في جميع أحياء جدة.', logo: '/images/lg-logo.webp', bgColor: '#A50034' },
-        { name: 'سامسونج', description: 'إصلاح مكيفات سامسونج احترافي في جدة لموديلات Wind-Free و Digital Inverter. خدمة نفس اليوم متاحة.', logo: '/images/samsung-logo.webp', bgColor: '#1428A0' },
-        { name: 'دايكين', description: 'خدمة إصلاح مكيفات دايكين موثوقة في جدة. خبراء في التعامل مع الهندسة اليابانية مع ضمان قطع الغيار الأصلية.', logo: '/images/daikin-logo.webp', bgColor: '#004B8D' },
-        { name: 'كارير', description: 'خدمة إصلاح مكيفات كارير الفاخرة في جدة لجميع الموديلات.', logo: '/images/carrier-logo.webp', bgColor: '#E31837' },
-        { name: 'جري', description: 'إصلاح مكيفات جري بأسعار معقولة في جدة لجميع الموديلات.', logo: '/images/gree-logo.webp', bgColor: '#1A2C3E' },
-        { name: 'هاير', description: 'خدمة إصلاح مكيفات هاير احترافية في جدة لجميع الموديلات.', logo: '/images/haier-logo.webp', bgColor: '#00A1B0' }
+        { name: 'LG', description: 'إصلاح مكيفات LG في جدة. Dual Inverter و Art Cool.', bgColor: '#A50034' },
+        { name: 'سامسونج', description: 'إصلاح مكيفات سامسونج في جدة. Wind-Free و Digital Inverter.', bgColor: '#1428A0' },
+        { name: 'دايكين', description: 'إصلاح مكيفات دايكين في جدة. جودة هندسة يابانية.', bgColor: '#004B8D' },
+        { name: 'كارير', description: 'إصلاح مكيفات كارير في جدة. WeatherMaker و Infinity.', bgColor: '#E31837' },
+        { name: 'جري', description: 'إصلاح مكيفات جري في جدة. تقنية الإنفرتر.', bgColor: '#1A2C3E' },
+        { name: 'هاير', description: 'إصلاح مكيفات هاير في جدة. وحدات ذكية.', bgColor: '#00A1B0' },
+        { name: 'توشيبا', description: 'إصلاح مكيفات توشيبا في جدة. جميع الموديلات.', bgColor: '#000000' },
+        { name: 'ميتسوبيشي', description: 'إصلاح مكيفات ميتسوبيشي في جدة. جودة فاخرة.', bgColor: '#E60012' },
+        { name: 'باناسونيك', description: 'إصلاح مكيفات باناسونيك في جدة. تقنية الإنفرتر.', bgColor: '#1A2C3E' },
+        { name: 'شارب', description: 'إصلاح مكيفات شارب في جدة. تقنية بلازما.', bgColor: '#0066B4' }
       ],
       
       process: [
@@ -478,180 +486,204 @@ export default function AirConditioningPage() {
         </div>
       </section>
 
-      {/* Brands Carousel Section - 6 Brands */}
-      <section style={{ padding: isMobile ? '60px 20px' : '80px 20px', backgroundColor: '#f9fafb' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{ 
-            fontSize: isMobile ? '1.8rem' : '2.5rem', 
-            textAlign: 'center', 
-            color: '#00939A', 
-            marginBottom: '15px' 
-          }}>
-            {currentContent.brandsTitle}
-          </h2>
-          <p style={{ 
-            textAlign: 'center', 
-            color: '#666', 
-            marginBottom: '40px', 
-            fontSize: isMobile ? '1rem' : '1.1rem' 
-          }}>
-            {currentContent.brandsSubtitle}
-          </p>
-          
-          <div style={{ 
-            position: 'relative',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '15px'
-          }}>
-            {/* Previous Button */}
-            <button
-              onClick={prevBrands}
-              disabled={currentBrandIndex === 0}
+     {/* Brands Carousel Section - 10 Brands - Clean Mobile Display */}
+<section style={{ padding: isMobile ? '40px 20px' : '80px 20px', backgroundColor: '#f9fafb' }}>
+  <div style={{ maxWidth: '1200px', margin: '0 0' }}>
+    <h2 style={{ 
+      fontSize: isMobile ? '1.8rem' : '2.5rem', 
+      textAlign: 'center', 
+      color: '#00939A', 
+      marginBottom: '15px' 
+    }}>
+      {currentContent.brandsTitle}
+    </h2>
+    <p style={{ 
+      textAlign: 'center', 
+      color: '#666', 
+      marginBottom: isMobile ? '30px' : '40px', 
+      fontSize: isMobile ? '0.9rem' : '1.1rem',
+      padding: '0 15px'
+    }}>
+      {currentContent.brandsSubtitle}
+    </p>
+    
+    <div style={{ 
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      gap: isMobile ? '8px' : '15px'
+    }}>
+      {/* Previous Button - Hide on mobile if preferred, or keep but make smaller */}
+      <button
+        onClick={prevBrands}
+        disabled={currentBrandIndex === 0}
+        style={{
+          background: currentBrandIndex === 0 ? '#ccc' : '#00939A',
+          color: 'white',
+          border: 'none',
+          width: isMobile ? '35px' : '40px',
+          height: isMobile ? '35px' : '40px',
+          borderRadius: '50%',
+          cursor: currentBrandIndex === 0 ? 'not-allowed' : 'pointer',
+          fontSize: isMobile ? '1rem' : '1.2rem',
+          transition: 'all 0.3s',
+          flexShrink: 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          opacity: currentBrandIndex === 0 ? 0.5 : 1
+        }}
+      >
+        {isRTL ? '→' : '←'}
+      </button>
+      
+      {/* Brands Container */}
+      <div style={{
+        flex: 1,
+        overflow: 'hidden'
+      }}>
+        <div style={{
+          display: 'flex',
+          gap: isMobile ? '15px' : '20px',
+          transition: 'transform 0.5s ease-in-out',
+          transform: `translateX(${isRTL ? currentBrandIndex * 100 : -currentBrandIndex * 100}%)`
+        }}>
+          {currentContent.brands.map((brand, index) => (
+            <div
+              key={index}
               style={{
-                background: currentBrandIndex === 0 ? '#ccc' : '#00939A',
-                color: 'white',
-                border: 'none',
-                width: '40px',
-                height: '40px',
-                borderRadius: '50%',
-                cursor: currentBrandIndex === 0 ? 'not-allowed' : 'pointer',
-                fontSize: '1.2rem',
-                transition: 'all 0.3s',
-                flexShrink: 0,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
+                minWidth: isMobile ? '100%' : `calc(33.333% - 14px)`,
+                background: 'white',
+                borderRadius: '12px',
+                overflow: 'hidden',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+                transition: 'transform 0.3s, box-shadow 0.3s',
+                cursor: 'pointer'
               }}
             >
-              {isRTL ? '→' : '←'}
-            </button>
-            
-            {/* Brands Container */}
-            <div style={{
-              flex: 1,
-              overflow: 'hidden'
-            }}>
+              {/* Brand Header */}
               <div style={{
+                background: brand.bgColor,
+                height: isMobile ? '80px' : '130px',
                 display: 'flex',
-                gap: '25px',
-                transition: 'transform 0.5s ease-in-out',
-                transform: `translateX(${isRTL ? currentBrandIndex * 100 : -currentBrandIndex * 100}%)`
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: isMobile ? '10px' : '15px'
               }}>
-                {currentContent.brands.map((brand, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      minWidth: isMobile ? '100%' : `calc(33.333% - 17px)`,
-                      background: 'white',
-                      borderRadius: '12px',
-                      overflow: 'hidden',
-                      boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
-                      transition: 'transform 0.3s, box-shadow 0.3s',
-                      cursor: 'pointer'
-                    }}
-                  >
-                    <div style={{
-                      background: brand.bgColor,
-                      height: '150px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      padding: '20px'
-                    }}>
-                      <div style={{
-                        background: 'white',
-                        borderRadius: '12px',
-                        padding: '15px 25px',
-                        display: 'inline-block'
-                      }}>
-                        <h3 style={{
-                          fontSize: '1.5rem',
-                          fontWeight: 'bold',
-                          color: brand.bgColor,
-                          margin: 0
-                        }}>
-                          {brand.name}
-                        </h3>
-                      </div>
-                    </div>
-                    <div style={{ padding: '20px', textAlign: isRTL ? 'right' : 'left' }}>
-                      <p style={{ color: '#666', lineHeight: '1.6', marginBottom: '15px', fontSize: '0.9rem' }}>
-                        {brand.description}
-                      </p>
-                      <a
-                        href={whatsappLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          display: 'inline-block',
-                          background: '#F0422C',
-                          color: '#FEFDFD',
-                          padding: '8px 16px',
-                          textDecoration: 'none',
-                          borderRadius: '6px',
-                          fontSize: '0.85rem',
-                          fontWeight: 'bold',
-                          transition: 'all 0.3s'
-                        }}
-                      >
-                        {currentContent.bookWhatsapp}
-                      </a>
-                    </div>
-                  </div>
-                ))}
+                <div style={{
+                  background: 'white',
+                  borderRadius: isMobile ? '8px' : '10px',
+                  padding: isMobile ? '6px 12px' : '12px 24px',
+                  display: 'inline-block'
+                }}>
+                  <h3 style={{
+                    fontSize: isMobile ? '1rem' : '1.4rem',
+                    fontWeight: 'bold',
+                    color: brand.bgColor,
+                    margin: 0,
+                    whiteSpace: 'nowrap'
+                  }}>
+                    {brand.name}
+                  </h3>
+                </div>
+              </div>
+              
+              {/* Brand Description */}
+              <div style={{ 
+                padding: isMobile ? '12px' : '15px', 
+                textAlign: isRTL ? 'right' : 'left'
+              }}>
+                <p style={{ 
+                  color: '#666', 
+                  lineHeight: isMobile ? '1.4' : '1.5', 
+                  marginBottom: isMobile ? '10px' : '12px', 
+                  fontSize: isMobile ? '0.7rem' : '0.8rem',
+                  display: '-webkit-box',
+                  WebkitLineClamp: isMobile ? 2 : 3,
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis'
+                }}>
+                  {brand.description}
+                </p>
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: isMobile ? 'block' : 'inline-block',
+                    background: '#F0422C',
+                    color: '#FEFDFD',
+                    padding: isMobile ? '8px 12px' : '6px 12px',
+                    textDecoration: 'none',
+                    borderRadius: '5px',
+                    fontSize: isMobile ? '0.7rem' : '0.75rem',
+                    fontWeight: 'bold',
+                    transition: 'all 0.3s',
+                    textAlign: 'center',
+                    width: isMobile ? '100%' : 'auto'
+                  }}
+                >
+                  {currentContent.bookWhatsapp}
+                </a>
               </div>
             </div>
-            
-            {/* Next Button */}
-            <button
-              onClick={nextBrands}
-              disabled={currentBrandIndex >= maxIndex}
-              style={{
-                background: currentBrandIndex >= maxIndex ? '#ccc' : '#00939A',
-                color: 'white',
-                border: 'none',
-                width: '40px',
-                height: '40px',
-                borderRadius: '50%',
-                cursor: currentBrandIndex >= maxIndex ? 'not-allowed' : 'pointer',
-                fontSize: '1.2rem',
-                transition: 'all 0.3s',
-                flexShrink: 0,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              {isRTL ? '←' : '→'}
-            </button>
-          </div>
-          
-          {/* Dots Indicator */}
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '10px',
-            marginTop: '30px'
-          }}>
-            {Array.from({ length: totalBrands - itemsPerView + 1 }).map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentBrandIndex(idx)}
-                style={{
-                  width: '10px',
-                  height: '10px',
-                  borderRadius: '50%',
-                  background: currentBrandIndex === idx ? '#00939A' : '#ccc',
-                  border: 'none',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s'
-                }}
-              />
-            ))}
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+      
+      {/* Next Button */}
+      <button
+        onClick={nextBrands}
+        disabled={currentBrandIndex >= maxIndex}
+        style={{
+          background: currentBrandIndex >= maxIndex ? '#ccc' : '#00939A',
+          color: 'white',
+          border: 'none',
+          width: isMobile ? '35px' : '40px',
+          height: isMobile ? '35px' : '40px',
+          borderRadius: '50%',
+          cursor: currentBrandIndex >= maxIndex ? 'not-allowed' : 'pointer',
+          fontSize: isMobile ? '1rem' : '1.2rem',
+          transition: 'all 0.3s',
+          flexShrink: 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          opacity: currentBrandIndex >= maxIndex ? 0.5 : 1
+        }}
+      >
+        {isRTL ? '←' : '→'}
+      </button>
+    </div>
+    
+    {/* Dots Indicator - Show all dots for easy navigation */}
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      gap: isMobile ? '8px' : '10px',
+      marginTop: isMobile ? '20px' : '25px',
+      flexWrap: 'wrap'
+    }}>
+      {currentContent.brands.map((_, idx) => (
+        <button
+          key={idx}
+          onClick={() => setCurrentBrandIndex(idx)}
+          style={{
+            width: isMobile ? '8px' : '10px',
+            height: isMobile ? '8px' : '10px',
+            borderRadius: '50%',
+            background: currentBrandIndex === idx ? '#00939A' : '#ccc',
+            border: 'none',
+            cursor: 'pointer',
+            transition: 'all 0.3s',
+            opacity: currentBrandIndex === idx ? 1 : 0.5
+          }}
+        />
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Process Section - How It Works */}
       <section style={{ padding: isMobile ? '60px 20px' : '80px 20px', backgroundColor: 'white' }}>

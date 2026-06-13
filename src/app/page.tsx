@@ -112,101 +112,110 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Overview */}
-      <ScrollReveal animation="fade-up">
-        <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t("home.sections.servicesOverview.title")}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t("home.sections.servicesOverview.subtitle")}
-            </p>
-          </div>
+     {/* Services Overview */}
+<ScrollReveal animation="fade-up">
+  <section className="py-16 bg-gray-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          {t("home.sections.servicesOverview.title")}
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          {t("home.sections.servicesOverview.subtitle")}
+        </p>
+      </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Air Conditioning Repair */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 transform animate-fade-in-left animation-delay-100">
-              <div className="relative h-48 flex items-end justify-center overflow-hidden">
-                <Image src={img18} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                {/* <p className="relative z-10 text-white text-sm font-medium pb-4">{t("home.sections.servicesOverview.cards.ac.badge")}</p> */}
-              </div>
-              <div className="p-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t("home.sections.servicesOverview.cards.ac.title")}</h3>
-                <p className="text-gray-600 mb-5">
-                  {t("home.sections.servicesOverview.cards.ac.description")}
-                </p>
-                <ul className="text-sm text-gray-600 mb-5 space-y-2">
-                  {(homeCards as any)?.ac?.bullets?.map?.((item: string, idx: number) => (
-                    <li key={`ac-${idx}`}>• {item}</li>
-                  ))}
-                </ul>
-                <Link
-                  href="/services/air-conditioning"
-                  className="text-[var(--color-teal)] font-medium hover:opacity-80 transition-colors"
-                >
-                  {t("home.sections.servicesOverview.cards.learnMore")}
-                </Link>
-              </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Air Conditioning Repair */}
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 transform animate-fade-in-left animation-delay-100 group">
+          <Link href="/services/air-conditioning" className="block">
+            <div className="relative h-48 flex items-end justify-center overflow-hidden">
+              <Image src={img18} alt="" fill className="object-cover transition-transform duration-500 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
             </div>
-
-            {/* Refrigerator Repair */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 transform animate-fade-in-up animation-delay-300">
-              <div className="relative h-48 flex items-end justify-center overflow-hidden">
-                <Image src={img8} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                {/* <p className="relative z-10 text-white text-sm font-medium pb-4">{t("home.sections.servicesOverview.cards.fridge.badge")}</p> */}
-              </div>
-              <div className="p-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t("home.sections.servicesOverview.cards.fridge.title")}</h3>
-                <p className="text-gray-600 mb-5">
-                  {t("home.sections.servicesOverview.cards.fridge.description")}
-                </p>
-                <ul className="text-sm text-gray-600 mb-5 space-y-2">
-                  {(homeCards as any)?.fridge?.bullets?.map?.((item: string, idx: number) => (
-                    <li key={`fridge-${idx}`}>• {item}</li>
-                  ))}
-                </ul>
-                <Link
-                  href="/services/refrigerator-repair"
-                  className="text-[var(--color-teal)] font-medium hover:opacity-80 transition-colors"
-                >
-                  {t("home.sections.servicesOverview.cards.learnMore")}
-                </Link>
-              </div>
+            <div className="p-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 hover:text-[var(--color-teal)] transition-colors">
+                {t("home.sections.servicesOverview.cards.ac.title")}
+              </h3>
+              <p className="text-gray-600 mb-5">
+                {t("home.sections.servicesOverview.cards.ac.description")}
+              </p>
+              <ul className="text-sm text-gray-600 mb-5 space-y-2">
+                {(homeCards as any)?.ac?.bullets?.map?.((item: string, idx: number) => (
+                  <li key={`ac-${idx}`}>• {item}</li>
+                ))}
+              </ul>
+              <span className="text-[var(--color-teal)] font-medium hover:opacity-80 transition-colors inline-flex items-center gap-1">
+                {t("home.sections.servicesOverview.cards.learnMore")}
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
             </div>
-
-            {/* Washing Machine Repair */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 transform animate-fade-in-right animation-delay-500">
-              <div className="relative h-48 flex items-end justify-center overflow-hidden">
-                <Image src={img11} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                {/* <p className="relative z-10 text-white text-sm font-medium pb-4">{t("home.sections.servicesOverview.cards.washer.badge")}</p> */}
-              </div>
-              <div className="p-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t("home.sections.servicesOverview.cards.washer.title")}</h3>
-                <p className="text-gray-600 mb-5">
-                  {t("home.sections.servicesOverview.cards.washer.description")}
-                </p>
-                <ul className="text-sm text-gray-600 mb-5 space-y-2">
-                  {(homeCards as any)?.washer?.bullets?.map?.((item: string, idx: number) => (
-                    <li key={`washer-${idx}`}>• {item}</li>
-                  ))}
-                </ul>
-                <Link
-                  href="/services/washing-machine-repair"
-                  className="text-[var(--color-teal)] font-medium hover:opacity-80 transition-colors"
-                >
-                  {t("home.sections.servicesOverview.cards.learnMore")}
-                </Link>
-              </div>
-            </div>
-          </div>
+          </Link>
         </div>
-        </section>
-      </ScrollReveal>
+
+        {/* Refrigerator Repair */}
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 transform animate-fade-in-up animation-delay-300 group">
+          <Link href="/services/refrigerator-repair" className="block">
+            <div className="relative h-48 flex items-end justify-center overflow-hidden">
+              <Image src={img8} alt="" fill className="object-cover transition-transform duration-500 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+            </div>
+            <div className="p-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 hover:text-[var(--color-teal)] transition-colors">
+                {t("home.sections.servicesOverview.cards.fridge.title")}
+              </h3>
+              <p className="text-gray-600 mb-5">
+                {t("home.sections.servicesOverview.cards.fridge.description")}
+              </p>
+              <ul className="text-sm text-gray-600 mb-5 space-y-2">
+                {(homeCards as any)?.fridge?.bullets?.map?.((item: string, idx: number) => (
+                  <li key={`fridge-${idx}`}>• {item}</li>
+                ))}
+              </ul>
+              <span className="text-[var(--color-teal)] font-medium hover:opacity-80 transition-colors inline-flex items-center gap-1">
+                {t("home.sections.servicesOverview.cards.learnMore")}
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </Link>
+        </div>
+
+        {/* Washing Machine Repair */}
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 transform animate-fade-in-right animation-delay-500 group">
+          <Link href="/services/washing-machine-repair" className="block">
+            <div className="relative h-48 flex items-end justify-center overflow-hidden">
+              <Image src={img11} alt="" fill className="object-cover transition-transform duration-500 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+            </div>
+            <div className="p-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 hover:text-[var(--color-teal)] transition-colors">
+                {t("home.sections.servicesOverview.cards.washer.title")}
+              </h3>
+              <p className="text-gray-600 mb-5">
+                {t("home.sections.servicesOverview.cards.washer.description")}
+              </p>
+              <ul className="text-sm text-gray-600 mb-5 space-y-2">
+                {(homeCards as any)?.washer?.bullets?.map?.((item: string, idx: number) => (
+                  <li key={`washer-${idx}`}>• {item}</li>
+                ))}
+              </ul>
+              <span className="text-[var(--color-teal)] font-medium hover:opacity-80 transition-colors inline-flex items-center gap-1">
+                {t("home.sections.servicesOverview.cards.learnMore")}
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </section>
+</ScrollReveal>
 
       {/* Why Choose Us */}
       <ScrollReveal animation="fade-up">

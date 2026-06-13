@@ -12,13 +12,13 @@ export default function WashingMachineRepairPage() {
   const [isMobile, setIsMobile] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
-  const [itemsPerView, setItemsPerView] = useState(3);
+  const [itemsPerView, setItemsPerView] = useState(4);
 
   useEffect(() => {
     const checkMobile = () => {
       const mobile = window.innerWidth < 768;
       setIsMobile(mobile);
-      setItemsPerView(mobile ? 1 : 3);
+      setItemsPerView(mobile ? 1 : 4);
     };
     checkMobile();
     window.addEventListener('resize', checkMobile);
@@ -29,7 +29,7 @@ export default function WashingMachineRepairPage() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  // SEO Rich Content with English & Arabic - Jeddah
+  // SEO Rich Content with English & Arabic - All Jeddah
   const content = {
     en: {
       heroTitle: 'Washing Machine Repair Services in Jeddah',
@@ -39,17 +39,17 @@ export default function WashingMachineRepairPage() {
       aboutDesc1: 'With over 10 years of experience in Jeddah, we provide top-quality washing machine repair, maintenance, and servicing. Our team of certified technicians ensures your washer runs efficiently and effectively.',
       aboutDesc2: 'We specialize in all types of washing machines including Automatic, Semi-Automatic, Front Load, Top Load, Inverter, and Commercial washers. Customer satisfaction is our top priority with 100% guaranteed service across Jeddah.',
       
-      servicesTitle: 'Our Washing Machine Services',
-      servicesSubtitle: 'Comprehensive washer repair solutions tailored to your needs in Jeddah',
+      servicesTitle: 'Our Washing Machine Services in Jeddah',
+      servicesSubtitle: 'Comprehensive washer repair solutions tailored to your needs across Jeddah',
       
-      brandsTitle: 'Brands We Service in Jeddah',
+      brandsTitle: 'Washing Machine Brands We Service in Jeddah',
       brandsSubtitle: 'We repair all major washing machine brands with genuine parts across Jeddah',
       
-      processTitle: 'How It Works',
+      processTitle: 'How It Works in Jeddah',
       processSubtitle: 'Simple 4-step process to get your washing machine repaired in Jeddah',
       
       testimonialsTitle: 'What Our Jeddah Customers Say',
-      testimonialsSubtitle: 'Real stories from satisfied customers in Jeddah',
+      testimonialsSubtitle: 'Real stories from satisfied customers across Jeddah',
       
       whyChooseTitle: 'Why Choose Us in Jeddah',
       whyChooseSubtitle: 'What makes us the best choice for your washing machine needs in Jeddah',
@@ -74,23 +74,27 @@ export default function WashingMachineRepairPage() {
       
       brands: [
         { name: 'LG', description: 'Expert LG washing machine repair in Jeddah for all models including Direct Drive and Inverter technology. Fast response across Jeddah districts.', bgColor: '#A50034' },
-        { name: 'Samsung', description: 'Professional Samsung washing machine repair in Jeddah for EcoBubble, AddWash, and all other models. Same-day service available.', bgColor: '#1428A0' },
+        { name: 'Samsung', description: 'Professional Samsung washing machine repair in Jeddah for Eco Bubble, AddWash, and all other models. Same-day service available.', bgColor: '#1428A0' },
         { name: 'Whirlpool', description: 'Reliable Whirlpool washing machine repair in Jeddah for all models including 6th Sense technology. Certified technicians.', bgColor: '#004B8D' },
-        { name: 'Bosch', description: 'Premium Bosch washing machine repair in Jeddah for all models including EcoSilence Drive. Expert handling with genuine parts.', bgColor: '#000000' },
-        { name: 'Haier', description: 'Affordable Haier washing machine repair in Jeddah for all models including inverter technology. Quick response and quality service.', bgColor: '#00A1B0' },
-        { name: 'Electrolux', description: 'Professional Electrolux washing machine repair in Jeddah for all models including UltraCare technology. Reliable service.', bgColor: '#E31837' }
+        { name: 'Bosch', description: 'Premium Bosch washing machine repair in Jeddah. Expert handling of German engineering with genuine parts warranty.', bgColor: '#000000' },
+        { name: 'Haier', description: 'Affordable Haier washing machine repair in Jeddah for all models including inverter technology. Quality guaranteed.', bgColor: '#00A1B0' },
+        { name: 'Electrolux', description: 'Professional Electrolux washing machine repair in Jeddah for all models including smart and energy-efficient units.', bgColor: '#005A9C' },
+        { name: 'Panasonic', description: 'Expert Panasonic washing machine repair in Jeddah for all models including inverter technology and smart cooling systems.', bgColor: '#1A2C3E' },
+        { name: 'Toshiba', description: 'Reliable Toshiba washing machine repair in Jeddah for all models. Fast diagnosis and effective solutions.', bgColor: '#B22234' },
+        { name: 'Hitachi', description: 'Professional Hitachi washing machine repair in Jeddah for all models including Big Drum and smart features.', bgColor: '#008B8B' },
+        { name: 'Miele', description: 'Premium Miele washing machine repair in Jeddah for all models. Expert handling with genuine parts and warranty.', bgColor: '#8B4513' }
       ],
       
       process: [
         { step: '01', title: 'Book Service', desc: 'Call us or book online for immediate service appointment in Jeddah', icon: '📞' },
         { step: '02', title: 'Schedule Visit', desc: 'Our technician visits your location in Jeddah at your preferred time', icon: '📅' },
         { step: '03', title: 'Diagnose & Fix', desc: 'Expert diagnosis and quick repair service at your doorstep in Jeddah', icon: '🔧' },
-        { step: '04', title: 'Quality Check', desc: 'Thorough testing and quality assurance before completion', icon: '✅' }
+        { step: '04', title: 'Quality Check', desc: 'Thorough testing and quality assurance before completion in Jeddah', icon: '✅' }
       ],
       
       testimonials: [
-        { name: 'Ahmed Al-Rahman', location: 'Al Salamah, Jeddah', rating: 5, text: 'Excellent washing machine repair service in Jeddah! My machine was fixed within 2 hours. Very professional technicians. Highly recommended!', image: '/images/avatar1.webp' },
-        { name: 'Sarah Ahmed', location: 'Al Rawdah, Jeddah', rating: 5, text: 'Best repair service in Jeddah. Reasonable prices and quick response time. They saved my laundry day! Great team.', image: '/images/avatar2.webp' },
+        { name: 'Ahmed Al-Rahman', location: 'Al Salamah, Jeddah', rating: 5, text: 'Excellent washing machine repair service in Jeddah! My washer was fixed within 2 hours. Very professional technicians. Highly recommended!', image: '/images/avatar1.webp' },
+        { name: 'Sarah Ahmed', location: 'Al Rawdah, Jeddah', rating: 5, text: 'Best washing machine repair service in Jeddah. Reasonable prices and quick response time. They came within an hour. Very satisfied!', image: '/images/avatar2.webp' },
         { name: 'Mohammed Ali', location: 'Al Nahdah, Jeddah', rating: 5, text: 'Great service in Jeddah! They fixed my front load washer issue perfectly. Professional team and excellent customer support.', image: '/images/avatar3.webp' }
       ],
       
@@ -107,7 +111,7 @@ export default function WashingMachineRepairPage() {
         { q: 'How long does washing machine repair take in Jeddah?', a: 'Most washing machine repairs in Jeddah are completed within 2-3 hours. Complex issues may take longer. We\'ll keep you updated throughout the process.' },
         { q: 'Do you provide emergency washer repair in Jeddah?', a: 'Yes! We offer 24/7 emergency washing machine repair services across all districts of Jeddah. Call our hotline for immediate assistance.' },
         { q: 'What areas of Jeddah do you serve?', a: 'We serve all areas of Jeddah including Al Salamah, Al Rawdah, Al Nahdah, Al Andalus, Al Zahra, Al Faisaliyah, and all other neighborhoods.' },
-        { q: 'What brands do you service in Jeddah?', a: 'We service all major brands including LG, Samsung, Whirlpool, GE, Kenmore, Bosch, Panasonic, Haier, Electrolux, and more in Jeddah.' },
+        { q: 'What brands do you service in Jeddah?', a: 'We service all major brands including LG, Samsung, Whirlpool, Bosch, Panasonic, Haier, Electrolux, Toshiba, Hitachi, Miele, and more in Jeddah.' },
         { q: 'How often should washing machine be serviced in Jeddah?', a: 'We recommend servicing your washing machine every 6-12 months for optimal performance, energy efficiency, and longer lifespan.' },
         { q: 'Do you offer maintenance contracts in Jeddah?', a: 'Yes, we offer flexible annual maintenance contracts with priority service, discounted rates, and regular checkups across Jeddah.' }
       ]
@@ -120,17 +124,17 @@ export default function WashingMachineRepairPage() {
       aboutDesc1: 'نحن نتمتع بخبرة تزيد عن 10 سنوات في جدة في تقديم خدمات إصلاح وصيانة الغسالات عالية الجودة. فريقنا من الفنيين المعتمدين يضمن تشغيل غسالتك بكفاءة وفعالية.',
       aboutDesc2: 'نحن متخصصون في جميع أنواع الغسالات بما في ذلك الأوتوماتيكية وشبه الأوتوماتيكية والتحميل الأمامي والتحميل العلوي والإنفرتر والتجارية. رضا العملاء هو أولويتنا القصوى مع خدمة مضمونة 100% في جميع أنحاء جدة.',
       
-      servicesTitle: 'خدمات الغسالات لدينا',
-      servicesSubtitle: 'حلول شاملة لإصلاح الغسالات مصممة خصيصاً لاحتياجاتك في جدة',
+      servicesTitle: 'خدمات الغسالات لدينا في جدة',
+      servicesSubtitle: 'حلول شاملة لإصلاح الغسالات مصممة خصيصاً لاحتياجاتك في جميع أنحاء جدة',
       
-      brandsTitle: 'الماركات التي نخدمها في جدة',
+      brandsTitle: 'ماركات الغسالات التي نخدمها في جدة',
       brandsSubtitle: 'نقوم بإصلاح جميع ماركات الغسالات الرئيسية بقطع غيار أصلية في جميع أنحاء جدة',
       
-      processTitle: 'كيف يعمل',
+      processTitle: 'كيف يعمل في جدة',
       processSubtitle: 'عملية بسيطة من 4 خطوات لإصلاح غسالتك في جدة',
       
       testimonialsTitle: 'ماذا يقول عملاؤنا في جدة',
-      testimonialsSubtitle: 'قصص حقيقية من عملاء راضين في جدة',
+      testimonialsSubtitle: 'قصص حقيقية من عملاء راضين في جميع أنحاء جدة',
       
       whyChooseTitle: 'لماذا تختارنا في جدة',
       whyChooseSubtitle: 'ما يجعلنا الخيار الأفضل لاحتياجات الغسالة الخاصة بك في جدة',
@@ -154,24 +158,28 @@ export default function WashingMachineRepairPage() {
       ],
       
       brands: [
-        { name: 'LG', description: 'خدمة إصلاح غسالات LG الاحترافية في جدة لجميع الموديلات. استجابة سريعة في جميع أحياء جدة.', bgColor: '#A50034' },
-        { name: 'سامسونج', description: 'إصلاح غسالات سامسونج الاحترافي في جدة لجميع الموديلات. خدمة نفس اليوم متاحة.', bgColor: '#1428A0' },
-        { name: 'ويرلبول', description: 'خدمة إصلاح غسالات ويرلبول الموثوقة في جدة. فنيون معتمدون.', bgColor: '#004B8D' },
-        { name: 'بوش', description: 'خدمة إصلاح غسالات بوش الفاخرة في جدة. خبراء في التعامل مع الهندسة الألمانية.', bgColor: '#000000' },
-        { name: 'هاير', description: 'إصلاح غسالات هاير بأسعار معقولة في جدة. استجابة سريعة وخدمة عالية الجودة.', bgColor: '#00A1B0' },
-        { name: 'إلكترولوكس', description: 'إصلاح غسالات إلكترولوكس الاحترافي في جدة. خدمة موثوقة.', bgColor: '#E31837' }
+        { name: 'LG', description: 'خدمة إصلاح غسالات LG احترافية في جدة لجميع الموديلات. استجابة سريعة في جميع أحياء جدة.', bgColor: '#A50034' },
+        { name: 'سامسونج', description: 'إصلاح غسالات سامسونج احترافي في جدة لجميع الموديلات. خدمة نفس اليوم متاحة في جميع أنحاء جدة.', bgColor: '#1428A0' },
+        { name: 'ويرلبول', description: 'خدمة إصلاح غسالات ويرلبول موثوقة في جدة لجميع الموديلات. فنيون معتمدون.', bgColor: '#004B8D' },
+        { name: 'بوش', description: 'خدمة إصلاح غسالات بوش الفاخرة في جدة. خبراء مع قطع غيار أصلية.', bgColor: '#000000' },
+        { name: 'هاير', description: 'إصلاح غسالات هاير بأسعار معقولة في جدة لجميع الموديلات. جودة مضمونة.', bgColor: '#00A1B0' },
+        { name: 'إلكترولوكس', description: 'إصلاح غسالات إلكترولوكس احترافي في جدة لجميع الموديلات.', bgColor: '#005A9C' },
+        { name: 'باناسونيك', description: 'إصلاح غسالات باناسونيك احترافي في جدة لجميع الموديلات.', bgColor: '#1A2C3E' },
+        { name: 'توشيبا', description: 'إصلاح غسالات توشيبا موثوق في جدة لجميع الموديلات.', bgColor: '#B22234' },
+        { name: 'هيتاشي', description: 'إصلاح غسالات هيتاشي احترافي في جدة لجميع الموديلات.', bgColor: '#008B8B' },
+        { name: 'ميل', description: 'خدمة إصلاح غسالات ميل الفاخرة في جدة. خبراء مع قطع غيار أصلية.', bgColor: '#8B4513' }
       ],
       
       process: [
         { step: '٠١', title: 'احجز الخدمة', desc: 'اتصل بنا أو احجز عبر الإنترنت لتحديد موعد الخدمة الفوري في جدة', icon: '📞' },
         { step: '٠٢', title: 'جدولة الزيارة', desc: 'فنيانا يزورك في موقعك في جدة في الوقت الذي تفضله', icon: '📅' },
         { step: '٠٣', title: 'التشخيص والإصلاح', desc: 'تشخيص خبير وإصلاح سريع على عتبة داركم في جدة', icon: '🔧' },
-        { step: '٠٤', title: 'فحص الجودة', desc: 'اختبار شامل وضمان الجودة قبل الانتهاء', icon: '✅' }
+        { step: '٠٤', title: 'فحص الجودة', desc: 'اختبار شامل وضمان الجودة قبل الانتهاء في جدة', icon: '✅' }
       ],
       
       testimonials: [
         { name: 'أحمد الرحمن', location: 'السلامة، جدة', rating: 5, text: 'خدمة إصلاح غسالات ممتازة في جدة! تم إصلاح الغسالة في غضون ساعتين. فنيون محترفون جداً. موصى به بشدة!', image: '/images/avatar1.webp' },
-        { name: 'سارة أحمد', location: 'الروضة، جدة', rating: 5, text: 'أفضل خدمة إصلاح في جدة. أسعار معقولة وسرعة في الاستجابة. أنقذوا يوم الغسيل لدي! فريق رائع.', image: '/images/avatar2.webp' },
+        { name: 'سارة أحمد', location: 'الروضة، جدة', rating: 5, text: 'أفضل خدمة إصلاح غسالات في جدة. أسعار معقولة وسرعة في الاستجابة. جاءوا في غضون ساعة. راضية جداً!', image: '/images/avatar2.webp' },
         { name: 'محمد علي', location: 'النزهة، جدة', rating: 5, text: 'خدمة رائعة في جدة! قاموا بإصلاح مشكلة الغسالة الأمامية بشكل مثالي. فريق محترف ودعم عملاء ممتاز.', image: '/images/avatar3.webp' }
       ],
       
@@ -188,7 +196,7 @@ export default function WashingMachineRepairPage() {
         { q: 'كم من الوقت يستغرق إصلاح الغسالة في جدة؟', a: 'يتم إكمال معظم إصلاحات الغسالات في جدة خلال 2-3 ساعات. قد تستغرق المشكلات المعقدة وقتاً أطول. وسنبقيك على اطلاع طوال العملية.' },
         { q: 'هل تقدمون خدمة إصلاح طارئة للغسالات في جدة؟', a: 'نعم! نقدم خدمات إصلاح طارئة للغسالات على مدار الساعة في جميع أحياء جدة. اتصل بخط المساعدة لدينا للحصول على مساعدة فورية.' },
         { q: 'ما هي مناطق جدة التي تخدمونها؟', a: 'نخدم جميع مناطق جدة بما في ذلك السلامة والروضة والنزهة والأندلس والزهراء والفيصلية وجميع الأحياء الأخرى.' },
-        { q: 'ما هي الماركات التي تخدمونها في جدة؟', a: 'نخدم جميع الماركات الرئيسية بما في ذلك LG وسامسونج وويرلبول وجي إي وكينمور وبوش وباناسونيك وهاير وإلكترولوكس والمزيد في جدة.' },
+        { q: 'ما هي الماركات التي تخدمونها في جدة؟', a: 'نخدم جميع الماركات الرئيسية بما في ذلك LG وسامسونج وويرلبول وبوش وباناسونيك وهاير وإلكترولوكس وتوشيبا وهيتاشي وميل والمزيد في جدة.' },
         { q: 'كم مرة يجب صيانة الغسالة في جدة؟', a: 'نوصي بصيانة الغسالة كل 6-12 شهراً للحصول على الأداء الأمثل وكفاءة الطاقة وعمر أطول.' },
         { q: 'هل تقدمون عقود صيانة في جدة؟', a: 'نعم، نقدم عقود صيانة سنوية مرنة مع خدمة ذات أولوية وأسعار مخفضة وفحوصات دورية في جميع أنحاء جدة.' }
       ]
@@ -221,6 +229,8 @@ export default function WashingMachineRepairPage() {
   const prevBrands = () => {
     setCurrentBrandIndex((prev) => Math.max(prev - 1, 0));
   };
+
+  const visibleBrands = currentContent.brands.slice(currentBrandIndex, currentBrandIndex + itemsPerView);
 
   return (
     <main style={{ paddingTop: '20px', minHeight: '100vh' }} dir={isRTL ? 'rtl' : 'ltr'}>
@@ -479,7 +489,7 @@ export default function WashingMachineRepairPage() {
         </div>
       </section>
 
-      {/* Brands Carousel Section - 6 Brands */}
+      {/* Brands Carousel Section - 10 Brands */}
       <section style={{ padding: isMobile ? '60px 20px' : '80px 20px', backgroundColor: '#f9fafb' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{ 
@@ -519,10 +529,7 @@ export default function WashingMachineRepairPage() {
                 cursor: currentBrandIndex === 0 ? 'not-allowed' : 'pointer',
                 fontSize: '1.2rem',
                 transition: 'all 0.3s',
-                flexShrink: 0,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
+                flexShrink: 0
               }}
             >
               {isRTL ? '→' : '←'}
@@ -535,7 +542,7 @@ export default function WashingMachineRepairPage() {
             }}>
               <div style={{
                 display: 'flex',
-                gap: '25px',
+                gap: '20px',
                 transition: 'transform 0.5s ease-in-out',
                 transform: `translateX(${isRTL ? currentBrandIndex * 100 : -currentBrandIndex * 100}%)`
               }}>
@@ -543,7 +550,7 @@ export default function WashingMachineRepairPage() {
                   <div
                     key={index}
                     style={{
-                      minWidth: isMobile ? '100%' : `calc(33.333% - 17px)`,
+                      minWidth: isMobile ? '100%' : 'calc(25% - 15px)',
                       background: 'white',
                       borderRadius: '12px',
                       overflow: 'hidden',
@@ -554,7 +561,7 @@ export default function WashingMachineRepairPage() {
                   >
                     <div style={{
                       background: brand.bgColor,
-                      height: '150px',
+                      height: '120px',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -562,12 +569,12 @@ export default function WashingMachineRepairPage() {
                     }}>
                       <div style={{
                         background: 'white',
-                        borderRadius: '12px',
-                        padding: '15px 25px',
+                        borderRadius: '10px',
+                        padding: '10px 20px',
                         display: 'inline-block'
                       }}>
                         <h3 style={{
-                          fontSize: '1.5rem',
+                          fontSize: '1.3rem',
                           fontWeight: 'bold',
                           color: brand.bgColor,
                           margin: 0
@@ -576,8 +583,8 @@ export default function WashingMachineRepairPage() {
                         </h3>
                       </div>
                     </div>
-                    <div style={{ padding: '20px', textAlign: isRTL ? 'right' : 'left' }}>
-                      <p style={{ color: '#666', lineHeight: '1.6', marginBottom: '15px', fontSize: '0.9rem' }}>
+                    <div style={{ padding: '15px', textAlign: isRTL ? 'right' : 'left' }}>
+                      <p style={{ color: '#666', lineHeight: '1.5', marginBottom: '15px', fontSize: '0.85rem' }}>
                         {brand.description}
                       </p>
                       <a
@@ -591,7 +598,7 @@ export default function WashingMachineRepairPage() {
                           padding: '8px 16px',
                           textDecoration: 'none',
                           borderRadius: '6px',
-                          fontSize: '0.85rem',
+                          fontSize: '0.8rem',
                           fontWeight: 'bold',
                           transition: 'all 0.3s'
                         }}
@@ -618,10 +625,7 @@ export default function WashingMachineRepairPage() {
                 cursor: currentBrandIndex >= maxIndex ? 'not-allowed' : 'pointer',
                 fontSize: '1.2rem',
                 transition: 'all 0.3s',
-                flexShrink: 0,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
+                flexShrink: 0
               }}
             >
               {isRTL ? '←' : '→'}
@@ -633,9 +637,10 @@ export default function WashingMachineRepairPage() {
             display: 'flex',
             justifyContent: 'center',
             gap: '10px',
-            marginTop: '30px'
+            marginTop: '30px',
+            flexWrap: 'wrap'
           }}>
-            {Array.from({ length: totalBrands - itemsPerView + 1 }).map((_, idx) => (
+            {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentBrandIndex(idx)}
