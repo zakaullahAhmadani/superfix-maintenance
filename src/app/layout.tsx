@@ -5,7 +5,8 @@ import {
   Inter,
   Open_Sans,
   Roboto,
-} from "next/font/google";
+}
+ from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -60,6 +61,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+  {/* Google tag (gtag.js) - Google Ads */}
+  <Script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=AW-18215162468"
+    strategy="afterInteractive"
+  />
+  <Script
+    id="google-ads"
+    strategy="afterInteractive"
+    dangerouslySetInnerHTML={{
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18215162468');
+      `,
+    }}
+  />
+</head>
       <body
         suppressHydrationWarning
         className={`${openSans.variable} ${inter.variable} ${jetbrainsMono.variable} ${cairo.variable} ${roboto.variable} antialiased min-h-screen flex flex-col`}
