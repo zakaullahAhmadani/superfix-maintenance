@@ -5,8 +5,7 @@ import {
   Inter,
   Open_Sans,
   Roboto,
-}
- from "next/font/google";
+} from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import Header from "@/components/Header";
@@ -63,29 +62,54 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-  {/* Google tag (gtag.js) - Google Ads */}
-  <Script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=AW-18215162468"
-    strategy="afterInteractive"
-  />
-  <Script
-    id="google-ads"
-    strategy="afterInteractive"
-    dangerouslySetInnerHTML={{
-      __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-18215162468');
-      `,
-    }}
-  />
-</head>
+        {/* Google Tag Manager - Script in head */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-TS8VVBJR');
+            `,
+          }}
+        />
+
+        {/* Google tag (gtag.js) - Google Ads */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18215162468"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-ads"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18215162468');
+            `,
+          }}
+        />
+      </head>
       <body
         suppressHydrationWarning
         className={`${openSans.variable} ${inter.variable} ${jetbrainsMono.variable} ${cairo.variable} ${roboto.variable} antialiased min-h-screen flex flex-col`}
       >
+        {/* Google Tag Manager (noscript) - Immediately after body opens */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TS8VVBJR"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+
         <LanguageProvider>
           <Header />
           <WhatsAppFloatingButton />
